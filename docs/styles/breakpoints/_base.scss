@@ -56,7 +56,23 @@ img {
 .lessons {
   @extend .content-width;
 
+  &__inner {
+    margin: 0 auto;
+    text-align: center;
+    max-width: $contentMaxWidth;
+  }
   &__item {
+    text-align: left;
     margin-bottom: 100px;
+
+    &:nth-child(odd) {
+      background-color: $cBgGray;
+    }
+  }
+  &__title {
+    @extend .sub-title;
+  }
+  &__image {
+    width: 400px;
   }
 }

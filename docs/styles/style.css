@@ -511,7 +511,7 @@ img {
   vertical-align: bottom;
 }
 
-.font-sm, .sub-title {
+.font-sm, .sub-title, .lessons__title {
   font-size: 14px;
 }
 
@@ -555,7 +555,7 @@ img {
   display: block;
 }
 
-.sub-title {
+.sub-title, .lessons__title {
   color: #535353;
 }
 
@@ -569,8 +569,23 @@ img {
           flex-direction: column;
 }
 
+.lessons__inner {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1070px;
+}
+
 .lessons__item {
+  text-align: left;
   margin-bottom: 100px;
+}
+
+.lessons__item:nth-child(odd) {
+  background-color: #eaebe6;
+}
+
+.lessons__image {
+  width: 400px;
 }
 
 @media (min-width: 960px) {
@@ -579,7 +594,7 @@ img {
 Stylesheet: 960px以上のモニタで適用
 
 ******************************************************************/
-  .font-sm, .sub-title {
+  .font-sm, .sub-title, .lessons__title {
     font-size: 16px;
   }
   .font-md {
@@ -597,22 +612,6 @@ Stylesheet: 960px以上のモニタで適用
   .pb-lg {
     padding-bottom: 150px !important;
   }
-  .popular__item {
-    -ms-flex-preferred-size: 25%;
-        flex-basis: 25%;
-  }
-  .popular__img {
-    height: 335px;
-  }
-  .travel__img {
-    height: 400px;
-  }
-  .travel__description {
-    margin-bottom: 40px;
-  }
-  .travel__title::before {
-    display: block;
-  }
   .footer__li {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -620,13 +619,6 @@ Stylesheet: 960px以上のモニタで適用
   }
   .header__nav {
     display: block;
-  }
-  .mobile-menu__btn {
-    display: none;
-  }
-  .swiper-slide {
-    -webkit-box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
-            box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
   }
 }
 
