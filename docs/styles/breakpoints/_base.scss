@@ -55,7 +55,6 @@ img {
 }
 .lessons {
   @extend .content-width;
-
   &__inner {
     margin: 0 auto;
     text-align: center;
@@ -64,8 +63,9 @@ img {
   &__item {
     text-align: left;
     margin-bottom: 100px;
+    width: 400px;
 
-    &:nth-child(odd) {
+    &:nth-child(even) {
       background-color: $cBgGray;
     }
   }

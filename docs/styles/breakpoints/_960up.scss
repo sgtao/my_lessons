@@ -33,3 +33,17 @@ Stylesheet: 960px以上のモニタで適用
     display: block;
   }
 }
+
+.lessons {
+  
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+  }
+  &__item {
+    margin: 10px 40px;
+    background-color: $cWhite;
+  }
+}

@@ -578,9 +578,10 @@ img {
 .lessons__item {
   text-align: left;
   margin-bottom: 100px;
+  width: 400px;
 }
 
-.lessons__item:nth-child(odd) {
+.lessons__item:nth-child(even) {
   background-color: #eaebe6;
 }
 
@@ -619,6 +620,24 @@ Stylesheet: 960px以上のモニタで適用
   }
   .header__nav {
     display: block;
+  }
+  .lessons__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .lessons__item {
+    margin: 10px 40px;
+    background-color: white;
   }
 }
 
