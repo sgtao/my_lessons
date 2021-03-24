@@ -7,10 +7,11 @@ var sts_game="preGame"; // status:{preGame, isGaming, complete}
 
 // timer
 const score = document.querySelector('#score');
-var   startTime;
+var   startTime, nowTime;
 var   timerId;
 function runTimer() {
-  score.textContent = ((Date.now() - startTime) / 1000).toFixed(2);
+  nowTime = ((Date.now() - startTime) / 1000).toFixed(2);
+  score.textContent = nowTime;
   timerId = setTimeout(function() {   runTimer();   }, 10); // 10ms毎に更新
 }
 
@@ -55,7 +56,11 @@ function active_panels(els) {
           sts_game = "complete";
       		clearTimeout(timerId);
           start_btn.textContent = "COMPLETE!!";
-          start_btn.className = "complete"
+          start_btn.className = "complete";
+          let _dd = new Date();
+          let _result_msg = `time : ${nowTime} sec. at ${_dd.toLocaleString("ja")}`;
+          console.log(_result_msg);
+          append_result(_result_msg);
         } else {
           current++;
         }
@@ -99,6 +104,17 @@ start_btn.addEventListener('click', function() {
     alert('wrong state. please reload page');
   }
 });
+
+// result of scores
+const result = document.querySelector('#result');
+function append_result(msg) {
+  let _append_msg = document.createElement(`div`);
+  _append_msg.textContent = msg;  
+  _append_msg.className = "score";
+  result.appendChild(_append_msg);
+}
+
+
 
 // main
 init_board(board);
