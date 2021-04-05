@@ -2,10 +2,18 @@ html, body {
   margin: 0;
   background-color: teal;
 }
-header {
+.header {
   background-color: white;
-  height: 10em;
-  margin-top: -20px;
+  height: auto;
+  margin-top: -12px;
+}
+.title {
+  margin-bottom: 0;
+  font-size: larger;
+  font-weight: 600;
+}
+.abstract {
+  margin-bottom: 0;
 }
 #container {
   margin: 20px;
