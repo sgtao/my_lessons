@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
   load_tilemap('./assets/tilemap.txt');
 });
 
-
 async function load_tilemap(filename) {
   fetch(filename).then(function (response) {
     return response.text();
@@ -60,7 +59,8 @@ function draw() {
   game.player.draw_player();
 
   // 3Dビューを描画. Draw the 3dview.
-  game.draw_3Dview_Ray();
+  let view_pos = new Vec2(tilemap.numX * tilemap.tSize + 20, 40);
+  game.draw_3Dview_Ray(view_pos);
 
   // ----- テキストを描画
   game.util.draw_msg('マウスドラッグ／カーソルで移動、A,Dキーで回転します');

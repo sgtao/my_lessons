@@ -338,12 +338,12 @@ class Game {
       }
     }
   }
-  draw_3Dview_Ray() {
+  draw_3Dview_Ray(vpos = new Vec2(305, 40)) {
     // 3Dビューを描画. Draw the 3dview.
     let walls = this.level.walls;
     let player = this.player;
     // let viewRect = new Ray2(new Vec2(305, 40), new Vec2(320, 240));
-    let viewRect = new Ray2(new Vec2(305, 40), new Vec2(320, 240));
+    let viewRect = new Ray2(vpos, new Vec2(320, 240));
 
     let fov = PI / 2;
     let centerAngle = player.angle;
