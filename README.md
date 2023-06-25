@@ -16,4 +16,7 @@
 - 06_AosagiHeron_RetroFPS
   - Youtube「[ヘロンの数学」FPSの作り方](https://www.youtube.com/watch?v=E8Qekxjq5Yg)を実装してみる。
 - 07_vuejs+chartjs
-  * Qiita記事『[vue-chartjsでグラフを描く](https://qiita.com/kiyc/items/a94a202bf06fff644f62)』を参考にVueでChart.jsを使ってみる
+  * Qiita記事『[vue-chartjsでグラフを描く](https://qiita.com/kiyc/items/a94a202bf06fff644f62)』を参考にVueでChart.jsを使ってみる。
+- 08_codeShin_react+threejs+fiber
+  * Youtube『[react-three-fiberで3Dモデル付きポートフォリオ](https://www.youtube.com/watch?v=UVZ0UkdKgmY)』を実装してみる。
+  * [memo](./docs/08_codeShin_react%2Bthreejs%2Bfiber/README.md)
